@@ -27,6 +27,7 @@ export default function Contact() {
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
     try {
+      console.log('Form submitted with data:', data);
       await new Promise(resolve => setTimeout(resolve, 1000));
       setIsSuccess(true);
       reset();
