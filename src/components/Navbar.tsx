@@ -44,18 +44,26 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
-            <Link href="/" className="flex items-center space-x-3">
-              <div className="relative w-8 h-8">
-                <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-500 to-purple-500 blur-lg opacity-50" />
-                <div className="relative w-full h-full rounded-xl bg-white dark:bg-gray-800 flex items-center justify-center">
-                  <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                    SM
-                  </span>
+            <Link href="/" className="flex items-center space-x-3 group">
+              <div className="relative">
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500 blur-xl opacity-50 group-hover:opacity-75 transition-opacity" />
+                <div className="relative flex items-center justify-center bg-white dark:bg-gray-800 rounded-2xl p-2 transition-transform group-hover:scale-[0.98]">
+                  <div className="flex flex-col items-center">
+                    <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
+                      SM
+                    </span>
+                    <div className="h-0.5 w-8 bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500 rounded-full mt-0.5" />
+                  </div>
                 </div>
               </div>
-              <span className="text-lg font-bold text-gray-900 dark:text-white hidden sm:block">
-                Stefan Momić
-              </span>
+              <div className="hidden sm:flex flex-col">
+                <span className="text-lg font-bold text-gray-900 dark:text-white">
+                  Stefan Momić
+                </span>
+                <span className="text-sm text-gray-600 dark:text-gray-400">
+                  Psihoterapeut
+                </span>
+              </div>
             </Link>
 
             {/* Desktop Navigation */}
