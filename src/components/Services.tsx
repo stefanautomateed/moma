@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Dialog } from '@headlessui/react';
@@ -13,7 +14,7 @@ interface Service {
   price: string;
   benefits: string[];
   forWhom: string[];
-  icon: (props: React.SVGProps<SVGSVGElement>) => JSX.Element;
+  icon: (props: React.SVGProps<SVGSVGElement>) => React.ReactElement;
 }
 
 const services: Service[] = [
